@@ -99,7 +99,7 @@ func getMemoryResources(config containertypes.Resources) *specs.LinuxMemory {
         if config.MemorySwap == 0 {
                 memory.Swap = &memorylimits
         } else if config.MemorySwap > 0 {
-                memory.Swap = &config.MemorySwap
+                memory.Swap = &config.Memory
         }
 
 	if config.MemorySwappiness != nil {
